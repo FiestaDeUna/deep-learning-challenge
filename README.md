@@ -8,6 +8,7 @@ The model is trained off of a dataset with the following features:
 
 
 EIN: Identifier
+
 NAME: Name or organization 
 APPLICATION_TYPE: type of Alphabet Soup application 
 AFFILIATION: Sector of industry 
