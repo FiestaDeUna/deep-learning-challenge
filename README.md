@@ -34,18 +34,21 @@ IS_SUCCESSFUL: Was the fundraiser successful (target variable)
 Process in code: 
 
 Step One: Preprocessing the data 
-*Drop non-feature columns (EIN, NAME) with pd.drop()
-*Identify any columns that have more than 10 unique values for potential binning with value_counts()
-*Bin all application types with less than 500 applications into an “Other” category  
-*Bin all classification types with less than 800 applications into an “Other” category 
+
+1. Drop non-feature columns (EIN, NAME) with pd.drop()
+2. Identify any columns that have more than 10 unique values for potential binning with value_counts()
+3. Bin all application types with less than 500 applications into an “Other” category  
+4. Bin all classification types with less than 800 applications into an “Other” category 
 ![](Images/classification_forloop.png) 
-*Convert all categorical data into numeric values with pd.get_dummies 
-*Separate target variable (“IS_SUCCESSFUL”) from other features 
-*Split the data data into training and testing sets with test_train_split 
-*Scale the data with StandardScaler 
+5. Convert all categorical data into numeric values with pd.get_dummies 
+6. Separate target variable (“IS_SUCCESSFUL”) from other features 
+7. Split the data data into training and testing sets with test_train_split 
+8. Scale the data with StandardScaler 
+
 
 
 Step Two: Complete, Train, and Evaluate the Model 
+
 1. Define the model with tf.keras.model. 
 2. Choose the amount of hidden layers and activation nodes per level; determine activation function per level 
 ![](Images/Initial_build.png) 
@@ -53,9 +56,11 @@ Step Two: Complete, Train, and Evaluate the Model
 4. Evaluate the model
 ![](Images/compile_train.png) 
 Initial Accuracy: 72.83% 
-![](Images/initial_model_accuracy) 
+![](Images/initial_model_accuracy)
+
 
 Step Three: Optimize the Model 
+
 1. Increase the number of activation nodes from 90 to 100 in the first hidden layer 
 2. Increase the number of activation nodes from 25 to 30 in the second hidden layer 
 3. Evaluate the model 
@@ -63,6 +68,7 @@ Step Three: Optimize the Model
 4. Change the initial activation function to LeakyReLu and add a third hidden layer; increase epochs from 50 to 75 
 5. Evaluate the model: 
         Optimization 2 Accuracy: 72.71 %
+   
 
 Reccomendation: Optimization 1 is the preferred model; though it does not reach the target accuracy of 75%, it achieved the best accuracy level while mainting a light processing load. 
 
