@@ -10,15 +10,25 @@ The model is trained off of a dataset with the following features:
 EIN: Identifier
 
 NAME: Name or organization 
+
 APPLICATION_TYPE: type of Alphabet Soup application 
+
 AFFILIATION: Sector of industry 
+
 CLASSIFICATION: Classification of organization 
+
 USE_CASE: Usage for funding 
+
 ORGANIZATION: Type of organization 
+
 STATUS: Active or inactive 
+
 INCOME_AMT:  income bins 
+
 SPECIAL_CONSIDERATIONS: yes or no 
+
 ASK_AMT: Amount requested 
+
 IS_SUCCESSFUL: Was the fundraiser successful (target variable) 
 
 Process in code: 
